@@ -331,7 +331,12 @@
                   <p><em>
                          To do so, we provide a preplanned path to the car, and the car would use its lidar sensor to sense the environment and adjust its maneuvers based on the sensing data and the preplanned path.
                          We use the a-star algorithm to find the shortest path, a probability sensor model for processing laser scan data from lidar, the particle filtering algorithm to estimate car's state and the surrounding environment, and PID control for steering the car. The software, written in Python, runs under the ROS framework on an Nvidia Jetson Nano development board.
+                         We also fine-tuned algorithms’ parameters and optimized the code flow, achieving a 30 percent reduction in path completion time.
                   </em><p>
+                  <p><em>
+                         Overall, to learn things that make the self driving car works is interesting, and to implement is more challenging but also fun in the process. (Also spend lots of nights to debug and fine-tune it.)
+                         Our team won the second place in the final race, and I am super proud of our team!
+                  </em></p>
                   <video width="20%" controls style="margin-top: 15px; display: block; margin-left: auto; margin-right: auto;">
                     <source src="assets/videos/IMG_6185.mp4" type="video/mp4" >
                   </video>
