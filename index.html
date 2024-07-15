@@ -27,6 +27,45 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .download-cv {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      background: #444;
+      border: none;
+      color: #fff;
+      padding: 10px 20px;
+      margin: 0 auto;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .profile-section {
+      text-align: center;
+    }
+
+    .profile-section img {
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .profile-section .logo {
+      margin-top: 15px;
+    }
+
+    .profile-section .logo h1 {
+      margin-bottom: 15px;
+    }
+  </style>
+
   <!-- =======================================================
   * Template Name: iPortfolio
   * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
@@ -51,10 +90,13 @@
       <h1 class="sitename">Chungwei (Denis) Wu</h1>
     </a>
 
-    <div class="social-links text-center">
-      <a href="mailto:chungwei@uw.edu" class="email"><i class="bi bi-envelope flex-shrink-0"></i></a>
-      <a href="https://linkedin.com/in/chung-wei-denis-wu/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      <a href="https://github.com/ChungWeiWu923" target="_blank" class="github"><i class="bi bi-github flex-shrink-0"></i></a>
+    <div class="profile-section text-center">
+      <div class="social-links">
+        <a href="mailto:chungwei@uw.edu" class="email"><i class="bi bi-envelope flex-shrink-0"></i></a>
+        <a href="https://linkedin.com/in/chung-wei-denis-wu/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/ChungWeiWu923" target="_blank" class="github"><i class="bi bi-github flex-shrink-0"></i></a>
+      </div>
+      <a href="assets/doc/Resume_Chung_Wei_Wu.pdf" target="_blank" class="download-cv">One Page CV</a>
     </div>
 
     <nav id="navmenu" class="navmenu">
@@ -97,7 +139,7 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h1>Hi, I'm Chungwei (Denis).</h1>
-        <p>A <span class="typed" data-typed-items="Software engineer, Traveler, Gamer">Software engineer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        <p>A <span class="typed" data-typed-items="Engineer, Traveler, Gamer">Engineer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
       </div>
 
     </section><!-- /Hero Section -->
@@ -172,11 +214,11 @@
               <h5>2024.06 - Present</h5>
               <p><em>Visual Concepts is a subsidiary of 2K Games that specializes in developing popular sports video game franchises, primarily NBA 2K and WWE 2K.</em></p>
               <p><em>Currently, I'm working on a testing framework using OpenGL, C++, and GLSL to how well GPU/CPU and memory in rendering parameterized human body models for NBA2K on PlayStation 5.</em></p>
+              <ul>
+                <li>Technologies: C++, OpenGL, GLSL, CMake, vcpkg</li>
+              </ul>
               <button id="toggle-visual-concepts" style="float: right; text-decoration: underline; background: none; border: none; color: #007bff; cursor: pointer;">Read more technical details</button>
               <div id="visual-concepts-content" style="display: none;">
-                <ul>
-                  <li>Technologies: C++, OpenGL, GLSL, CMake, vcpkg</li>
-                </ul>
                 <p><em>I'm building a framework (basically a toolset) with OpenGL, C++, and GLSL to check GPU/CPU and memory performance for rendering human body models in NBA2K on PS5. I'm working with VC Blueshift, which is like the R&D department for NBA2K.</em></p>
                 <p><em>In addition, I also spend some time on researching and implementing compression algorithms for unit vectors to see if we can save memory without losing frame rate. It's challenging but super interesting - we're trying to squeeze out every bit of performance possible.</em></p>
                 <p><em></em>As a gamer and a software engineer, it is always exciting to learn the knowledge of graphics optimization and playing things with low-level performance tuning within CPU and GPU architecture.</p>
@@ -189,22 +231,21 @@
               <h5>2021.09 - 2023.06</h5>
               <p><em>Novatek Microelectronics Corp. is a leading fabless chip design company specializing in the design and development of a wide range of display driver ICs & SoC solutions that driving sophisticated flat-panel display applications and audio/video applications for all digital devices.</em></p>
               <p><em>As an embedded SWE, I mostly focus on developing and optimizing the embedded Linux C driver, attending the R&D work of ARM-based TV system-on-chip (SoC) in functional verfication & validation, and supporting clients and FAE teams in debugging issues related to firmware.</em></p>
-              <p><em></em></p>
+              <ul>
+                <li>Technologies: C, TCL, Functional Verification & Validation, CI/CD, unit testing, Git, Jira, Linux</li>
+              </ul>
               <button id="toggle-novatek" style="float: right; text-decoration: underline; background: none; border: none; color: #007bff; cursor: pointer;">Read more technical details</button>
               <div id="novatek-content" style="display: none;">
-              <ul>
-                <li>Technologies: C, TCL, Functional Verification & Validation, CI/CD, unit testing</li>
-              </ul>
-              <p><em>Most of my work are the combination of hardware and software - you have to implementing software feature or optimizing software structure based on the understanding and the specs of hardware. 
-                     For example, implementing display features like orbit for preventing OLED panel burn-in require the SoC spec of corresponding registers, the signal timing spec of OLED panel itself, the understanding of the large driver code base with different layers and APIs, and the coding skills to make things right. 
-                     In my opinion, doing software engineering under the restriction of hardware made thing both more challenging and fun at the same time.</em></p>     
-              <p><em>I also worked on a side project to do the CI/CD using the TCL script we wrote during the functional verfication phase of IC development. 
-                     This project is aim to find out the potential side effect error of driver code base in the git repository when team member pushing code change to solve certain display issue. 
-                     I assemble some hardwares like SoC development board, custom input source board, and a capture card to send signal back to notebook as a test platform, write some TCL testing scripts and c code framework, and use Jenkins to do the CI/CD pipeline with help from QA team.
-                     This tool eventually became a important tool to make our work much easier during product development and debugging issues with client.</em></p>
-
-              <p><em>This is where the journey begins, and I indeed learn a lot in both hard skills and soft skills during that time. </em></p>
-              <button id="toggle-novatek-close" style="float: right; text-decoration: underline; background: none; border: none; color: #007bff; cursor: pointer;">Close</button>
+                <p><em>Most of my work are the combination of hardware and software - you have to implementing software feature or optimizing software structure based on the understanding and the specs of hardware. 
+                       For example, implementing display features like orbit for preventing OLED panel burn-in require the SoC spec of corresponding registers, the signal timing spec of OLED panel itself, the understanding of the large driver code base with different layers and APIs, and the coding skills to make things right. 
+                       In my opinion, doing software engineering under the restriction of hardware made thing both more challenging and fun at the same time.</em></p>     
+               <p><em>I also worked on a side project to do the CI/CD using the TCL script we wrote during the functional verfication phase of IC development. 
+                      This project is aim to find out the potential side effect error of driver code base in the git repository when team member pushing code change to solve certain display issue. 
+                      I assemble some hardwares like SoC development board, custom input source board, and a capture card to send signal back to notebook as a test platform, write some TCL testing scripts and c code framework, and use Jenkins to do the CI/CD pipeline with help from QA team.
+                      This tool eventually became a important tool to make our work much easier during product development and debugging issues with client.</em></p>
+               <p><em>This is where the journey begins, and I indeed learn a lot in both hard skills and soft skills during that time. </em></p>
+               <button id="toggle-novatek-close" style="float: right; text-decoration: underline; background: none; border: none; color: #007bff; cursor: pointer;">Close</button>
+              </div>
             </div><!-- Edn Resume Item -->
 
           </div>
@@ -243,27 +284,60 @@
               <div class="resume-item">
                 <h4>Leveraging AI to Identify the KOL</h4>
                 <h5>2024.01 - 2024.06</h5>
-                <p><em>This is a capstone project between University of Washington and Genmab, a pharmaceutical company. This project aims to develop a machine learning powered application to map current KOLs with the highest influence and predict
-                  future leaders in medicine field.</em></p>
+                <p><em>This capstone project is a collaboration between the department of electrical engineering in University of Washington and Genmab, an international biotech company specializing in antibody therapeutics for the treatment of cancer and other serious diseases. 
+                       This project aims to develop a machine learning powered application to map current KOLs with the highest influence and predict future leaders in medicine field. 
+                       You could access the final website through this link: <a href="http://findkol.com/search/" target="_blank">http://findkol.com/search/</a></em></p>
                 <ul>
-                  <li>Link: <a href="http://findkol.com/search/" target="_blank">http://findkol.com/search/</a></li>
-                  <li>Developed a front-end application with web-based UI and algorithm in Python based on machine learning (ML) to identify key opinion leaders (KOLs) in the pharmaceutical industry</li>
-                  <li>Implemented a Python-based web scraping script for machine learning algorithm’s inputs, including dataset retrieval from online databases, and dataset preprocessing using NetworkX</li>
-                  <li>Constructed a Graph Neural Network (GNN) with PyTorch to calculate centrality scores for individuals, facilitating the identification of KOLs through score-based ranking</li>
-                  <li>Developed the back-end system in python with Django REST framework and MySQL database to provide RESTful API for the front-end application</li>
+                  <li>Technologies: Python, NetworkX, Graph Neural Network, PyTorch, Django, RESTful API, MySQL, web scraping, machine learning</li>
                 </ul>
+                <button id="toggle-kol" style="float: right; text-decoration: underline; background: none; border: none; color: #007bff; cursor: pointer;">Read more technical details</button>
+                <div id="kol-content" style="display: none;">
+                  <p><em>This project is aim to develop a front-end application with web-based UI and algorithm in Python based on machine learning (ML) to identify key opinion leaders (KOLs) in the pharmaceutical industry. 
+                         The KOL in pharmaceutical industry usually have high citations and high number of clinical trials, so those people are the target we are seeking for. 
+                         This project could be divided into three parts: the core machine learning (ML) algorithm to provide a list of KOLs for certain disease, a back-end system with database to store those lists, and a front-end web page UI for user to search the result. 
+                         I personally involved in the development of ML part and the back-end part.
+                  </em></p>
+                  <p><em>For the ML part, we use some web scraping scripts in python with Entraz, an online search system provided by NCBI, to pull down the publications and clinical trials dataset from online database like PubMed and ClinicalTrials.gov.
+                         After the data preprocessing process to clean and remove abnormal data such as the work-in-progress trials and store those data in to JSON file, we use NetworkX to construct the citation network or co-trials network.
+                         The node in those network represents a researcher or a doctor.
+                         Then we calculate the centrality score to rank those node based on the overall influence to that network with the acceleration of using graph neural network constructed with PyTorch. The ranking list of KOL is the output of the stage.
+                  </em></p>
+                  <p><em>For our back-end implementation, we utilize Django to create RESTful APIs for the front-end and MySQL to store KOL data. Our web application has three main routes:</em></p>
+                  <ul>
+                    <li>/add: Adds data to the database.</li>
+                    <li>/search: Main page displaying prompts and filters. Users can apply filters and submit to retrieve the top 50 KOLs meeting the criteria</li>
+                    <li>/info: Displays detailed information for the selected KOL</li>
+                  </ul>
+                  <p><em>We have implemented three corresponding APIs using Django. Each API processes GET requests, parses the request parameters, executes SQL queries on the database, and displays the retrieved data on the respective page.</em></p>       
+                  <img src="assets/img/pic6.jpg" alt="KOL Project Image" class="img-fluid" style="margin-top: 15px; max-width: 70%; display: block; margin-left: auto; margin-right: auto;">
+                  <p style="text-align: center;"><em>Figure: The home search page of the application.</em></p>
+                  <button id="toggle-kol-close" style="float: right; text-decoration: underline; background: none; border: none; color: #007bff; cursor: pointer;">Close</button>
+                </div>
               </div><!-- Edn Resume Item -->
   
               <div class="resume-item">
                 <h4>Lidar-based Self Driving Car</h4>
                 <h5>2023.09 - 2023.12</h5>
                 <p><em>This is the final project of a course, The Self Driving Car: Introduction To Ai For Mobile Robots, offered by the University of Washington. The aim of this project is to develop software for running on a MuSHR rally car to win a racing tournament by navigating through the basement of the EE building in the shortest time.</em></p>
+
                 <ul>
-                  <li>Developed the embedded software in python on the Nvidia Jetson Nano for sensing, planning, and steering the MuSHR rally car with Lidar</li>
-                  <li>Implemented particle filter algorithm with probability sensing model on extracting data from Lidar for localization of the car, A* algorithm for planning the shortest path, and PID control algorithm for steering the car along the calculated path</li>
-                  <li>Fine-tuned algorithms’ parameters and optimized the code flow, achieving a 30 percent reduction in path completion time</li>
-                  <li>Won the second place among 13 groups in time trial competition of navigating through waypoints and avoid obstacles</li>
+                  <li>Technologies: Python, Nvidia Jetson Nano, ROS, Particle filter algorithm, Lidar, Probability sensing model, A* algorithm</li>
                 </ul>
+                <button id="toggle-car" style="float: right; text-decoration: underline; background: none; border: none; color: #007bff; cursor: pointer;">Read more technical details</button>
+                <div id="car-content" style="display: none;">
+                  <p><em>The goal of this project is to develop software for a MuSHR rally car to win a racing tournament by navigating the EE building basement in the shortest time.
+                         The car must follow designated path points (marked as the blue one on the floor), maintain a safe distance from certain points (marked as the red one on the floor), and avoiding obstacles in the basement area.
+                  </em></p>
+                  <p><em>
+                         To do so, we provide a preplanned path to the car, and the car would use its lidar sensor to sense the environment and adjust its maneuvers based on the sensing data and the preplanned path.
+                         We use the a-star algorithm to find the shortest path, a probability sensor model for processing laser scan data from lidar, the particle filtering algorithm to estimate car's state and the surrounding environment, and PID control for steering the car. The software, written in Python, runs under the ROS framework on an Nvidia Jetson Nano development board.
+                  </em><p>
+                  <video width="20%" controls style="margin-top: 15px; display: block; margin-left: auto; margin-right: auto;">
+                    <source src="assets/videos/IMG_6185.mp4" type="video/mp4" >
+                  </video>
+                  <p style="text-align: center;"><em>Video: The final race.</em></p>
+                </div>
+                <button id="toggle-car-close" style="float: right; text-decoration: underline; background: none; border: none; color: #007bff; cursor: pointer; display: none;">Close</button>
               </div><!-- Edn Resume Item -->
   
             </div>
@@ -322,10 +396,17 @@
       var closeButton = document.getElementById('toggle-visual-concepts-close');
       var content = document.getElementById('visual-concepts-content');
 
-
       var toggleNovatek = document.getElementById('toggle-novatek');
       var closeNovatek = document.getElementById('toggle-novatek-close');
       var novatekContent = document.getElementById('novatek-content');
+
+      var toggleKol = document.getElementById('toggle-kol');
+      var closeKol = document.getElementById('toggle-kol-close');
+      var kolContent = document.getElementById('kol-content');
+
+      var toggleCar = document.getElementById('toggle-car');
+      var closeCar = document.getElementById('toggle-car-close');
+      var carContent = document.getElementById('car-content');
   
       toggleButton.addEventListener('click', function () {
         content.style.display = 'block';
@@ -345,6 +426,28 @@
       closeNovatek.addEventListener('click', function () {
         novatekContent.style.display = 'none';
         toggleNovatek.style.display = 'block';
+      });
+
+      toggleKol.addEventListener('click', function () {
+        kolContent.style.display = 'block';
+        toggleKol.style.display = 'none';
+      });
+
+      closeKol.addEventListener('click', function () {
+        kolContent.style.display = 'none';
+        toggleKol.style.display = 'block';
+      });
+
+      toggleCar.addEventListener('click', function () {
+        carContent.style.display = 'block';
+        toggleCar.style.display = 'none';
+        closeCar.style.display = 'inline';
+      });
+
+      closeCar.addEventListener('click', function () {
+        carContent.style.display = 'none';
+      toggleCar.style.display = 'inline';
+      closeCar.style.display = 'none';
       });
     });
   </script>
